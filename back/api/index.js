@@ -6,7 +6,7 @@ const app = express();
 const port = 3000;
 
 // ルートエンドポイントにアクセスしたときに「Hello World」を表示
-app.get('/',(rep, res) => {
+app.get('/',(req, res) => {
     res.send('Hello World');
 });
 
