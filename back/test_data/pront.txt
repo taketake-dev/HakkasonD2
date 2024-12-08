@@ -1,0 +1,33 @@
+user_id,user_name,password
+al,alice,password123
+b,bob,securepass
+char,charlie,qwerty123
+dv,dave,12345abcd
+mm,emma,passw0rd!
+このテストデータcsvをもっと伸ばして
+主キーはuser_id
+
+
+のuser_idをもとに
+user_id:text okome:int8 role:text exposition:text billin:int8
+のテストデータをcvsとして作って
+billinは0で
+okomeは0以上
+roleはProgrammer, writer, composer, artistのみ
+expositionは自己紹介
+
+
+これらのuser_idをcreatorとしてランダムに使って
+id:text,creator:text,type:int2,url:textの40行
+のテストデータをcvsとして作って
+typeは0~4とする
+主キーはidで八文字のランダムな英数字
+
+
+id:text,creator:text,produc:text,order:int8,explanation:textの15行
+のテストデータをcsvとして作って
+creatorはuser_idを外部参照
+producはなし
+orderは0~4とする
+explanationは募集文
+主キーはidで八文字のランダムな英数字

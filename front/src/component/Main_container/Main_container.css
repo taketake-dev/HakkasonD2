@@ -1,0 +1,20 @@
+.main-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .content-block {
+    margin-bottom: 20px;
+  }
+  
+  .content-item {
+    display: flex; /* 横並びに配置 */
+    align-items: center; /* 垂直方向に中央揃え */
+    gap: 10px; /* ボタンと画像の間にスペース */
+  }
+  
+  .content-image {
+    width: 50px; /* 画像の幅を調整 */
+    height: 50px; /* 画像の高さを調整 */
+  }
+ 

@@ -1,0 +1,74 @@
+/* 全体のスタイル（中央揃えを解除） */
+body, html {
+    height: 100%; /* ページ全体の高さを100%に設定 */
+    margin: 0; /* マージンをリセット */
+    background-color: #f0f0f0; /* 背景色を設定（任意） */
+  }
+  
+  /* ログイン画面の中央揃え */
+  .login-container {
+    display: flex;
+    flex-direction: column; /* 縦並び */
+    align-items: center; /* 子要素を中央揃え */
+    justify-content: center; /* 子要素を中央揃え */
+    background-color: #fff; /* 背景色を設定 */
+    padding: 30px; /* 内側の余白 */
+    border-radius: 10px; /* 角を丸くする */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 軽い影をつけて浮き上がらせる */
+    width: 100%;
+    max-width: 500px; /* 最大幅を設定 */
+    position: absolute; /* 絶対配置にして画面中央に配置 */
+    top: 50%; /* 画面の縦中央 */
+    left: 50%; /* 画面の横中央 */
+    transform: translate(-50%, -50%); /* 自身の幅・高さの半分だけ移動して中央揃え */
+  }
+  
+  /* 見出しのスタイル */
+  h1 {
+    text-align: center; /* 見出しを中央揃え */
+    margin-bottom: 20px; /* 見出しとフォームの間にスペース */
+  }
+  
+  h2 {
+    text-align: center; /* 見出しを中央揃え */
+    margin-bottom: 10px; /* 見出しと入力フィールドの間にスペース */
+  }
+  
+  /* 入力フィールドのスタイル */
+  input {
+    width: 100%; /* 幅を100%に設定 */
+    padding: 10px; /* 内側の余白 */
+    margin-bottom: 20px; /* 各入力フィールドの間にスペース */
+    border: 1px solid #ccc; /* 境界線 */
+    border-radius: 5px; /* 角を丸くする */
+    font-size: 16px; /* フォントサイズ */
+    box-sizing: border-box; /* パディングを含めた幅・高さを計算 */
+  }
+  
+  /* ボタンのスタイル */
+  .Side_button {
+    padding: 10px 20px;
+    background-color: #4CAF50; /* ボタンの背景色 */
+    color: white; /* ボタンの文字色 */
+    border: none; /* ボーダーを無しにする */
+    cursor: pointer; /* カーソルをポインターに変更 */
+    border-radius: 5px; /* 角を丸くする */
+    font-size: 16px; /* フォントサイズ */
+  }
+  
+  .Side_button:hover {
+    background-color: #45a049; /* ホバー時の背景色 */
+  }
+  
+  /* 入力されたテキストを表示するパラグラフ */
+  p {
+    font-size: 16px; /* フォントサイズ */
+    color: #333; /* テキストの色 */
+    margin-top: 10px; /* 上部にスペース */
+  }
+
+  /*パスワードとメールアドレス間違ってた時のエラーメッセージ*/
+  .error
+  {
+    color: #ff0000;
+  }

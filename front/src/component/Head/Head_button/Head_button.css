@@ -1,0 +1,61 @@
+/* コンテナの基本スタイル */
+.head-container {
+  display: flex; /* フレックスボックスレイアウト */
+  flex-wrap: wrap; /* ボタンが入りきらない場合、次の行に折り返す */
+  margin: 10px 0;
+  justify-content: center; /* 初期状態で中央寄せ */
+  align-items: center; /* ボタンを垂直方向に中央に配置 */
+  gap: 10px; /* ボタン間の隙間 */
+}
+
+/* 左寄せ */
+.head-container.left {
+  justify-content: flex-start;
+}
+
+/* 中央寄せ */
+.head-container.center {
+  justify-content: center;
+}
+
+/* 右寄せ */
+.head-container.right {
+  justify-content: flex-end;
+}
+
+/* ヘッドボタンの基本スタイル */
+.head-button {
+  background-color: #28a745; /* 緑色の背景 */
+  color: white; /* 文字色を白に */
+  border: 2px solid #218838; /* 実線の枠線を少し濃い緑色 */
+  cursor: pointer;
+  font-size: 1rem; /* フォントサイズを指定 */
+  padding: 10px 20px; /* ボタンの内側の余白を調整 */
+  transition: background-color 0.3s ease, border-color 0.3s ease; /* 特定のプロパティのみアニメーション */
+  flex: 0 1 auto; /* ボタンのサイズをコンテンツに基づいて調整 */
+  white-space: nowrap; /* ボタン内のテキストを折り返さない */
+}
+
+/* ホバー時のスタイル */
+.head-button:hover {
+  background-color: #218838; /* ホバー時に少し暗い緑色に変更 */
+  border-color: #1e7e34; /* 枠線をさらに濃い緑色に変更 */
+}
+
+/* フォーカス時のスタイル */
+.head-button:focus {
+  outline: none; /* フォーカス時の青い枠線を削除 */
+  box-shadow: 0 0 5px 2px rgba(0, 123, 255, 0.5); /* フォーカス時に青い影を追加 */
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 768px) {
+  .head-button {
+    font-size: 14px; /* 小さい画面ではフォントサイズを小さく */
+    padding: 8px 16px; /* ボタンのパディングも調整 */
+  }
+
+  .head-container {
+    justify-content: space-between; /* 小さい画面では均等に並べる */
+  }
+}

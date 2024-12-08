@@ -1,7 +1,7 @@
 const express = require('express');
-const { createClient } = require('@supabase/supabase-js');
+const {supabase,generateUnusedId} = require('./supabase_wrapper.js');
 const router = express.Router();
-
+const table="login"
 
 
 async function getranking(req, res){

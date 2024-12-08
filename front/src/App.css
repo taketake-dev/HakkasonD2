@@ -1,0 +1,45 @@
+/* メニューの表示/非表示を制御するためのスタイル */
+.menu 
+{
+  display: flex;
+  flex-direction: column;
+  gap: auto;
+  flex-wrap: wrap;
+  overflow: hidden; /* メニューの表示/非表示時に余計な部分が見えないようにする */
+  max-height: 0; /* 初期状態で高さを0にして非表示 */
+  opacity: 0; /* 初期状態で非表示 */
+  transition: max-height 0.5s ease, opacity 0.3s ease; /* トランジションでスムーズに表示・非表示 */
+}
+
+/* メニューが表示される状態 */
+.menu.open 
+{
+  max-height: 1000px; /* メニューが開く際の最大高さ（適切な値を設定） */
+  opacity: 1; /* メニューを表示 */
+}
+
+/* メニューを横並びにする設定（大きな画面） */
+@media (min-width: 768px) 
+{
+  .menu 
+  {
+    flex-direction: row;
+    gap: 15px;
+  }
+}
+
+/* メニュー切り替えボタン */
+.menu-toggle-btn 
+{
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.menu-toggle-btn:hover 
+{
+  background-color: #45a049;
+}

@@ -1,0 +1,39 @@
+/* 基本のテキストスタイル */
+.text_of_page {
+  padding: 8px;
+  color: #333;
+  position: relative;
+  margin-left: 270px; /* サイドバーの幅分だけ右にずらす */
+  margin-top: 80px; /* ヘッダーの高さ分だけ下にずらす */
+  font-size: 16px;
+  line-height: 1.5;
+  z-index: 1;
+  text-align: center; /* すべてのテキストを中央揃え */
+}
+
+/* size_of_text の値に基づくフォントサイズの調整 */
+.text_of_page-1 { font-size: 12px; }
+.text_of_page-2 { font-size: 14px; }
+.text_of_page-3 { font-size: 16px; }
+.text_of_page-4 { font-size: 18px; }
+.text_of_page-5 { font-size: 20px; }
+.text_of_page-6 { font-size: 22px; }
+.text_of_page-7 { font-size: 24px; }
+.text_of_page-8 { font-size: 26px; }
+
+/* すべてのテキストを中央に配置（1〜8のサイズに関わらず） */
+.text_of_page-1, .text_of_page-2, .text_of_page-3, .text_of_page-4, .text_of_page-5, .text_of_page-6, .text_of_page-7, .text_of_page-8 {
+  text-align: center; /* 中央揃え */
+  width: 100%; /* 幅を100%にして中央に配置 */
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 200px;
+  }
+
+  .text_of_page {
+    margin-left: 220px; /* サイドバーの幅が狭くなるので調整 */
+  }
+}

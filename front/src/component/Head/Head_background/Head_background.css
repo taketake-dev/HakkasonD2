@@ -1,0 +1,50 @@
+/* 基本の背景スタイル */
+.header-background 
+{
+  position: absolute; /* ヘッダーの下に背景画像を重ねるために絶対位置指定 */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover; /* 画像を親要素に合わせて拡大・縮小 */
+  background-position: center; /* 画像が中央に配置されるように */
+  background-repeat: no-repeat; /* 画像の繰り返しを防ぐ */
+  z-index: -1; /* ヘッダーより下に配置 */
+  max-height: 500px; /* 縦幅の最大値を500pxに設定（必要に応じて調整） */
+  height: auto; /* 高さを自動調整 */
+}
+
+/* Now_page が "profile" の場合 */
+.header-background-profile {
+  background-image: url('./images/MATSUOKA_profile.jpg');
+}
+
+/* Now_page が "production" の場合 */
+.header-background-production {
+  background-image: url('./images/MATSUOKA_production.jpg');
+}
+
+/* Now_page が "communication" の場合 */
+.header-background-communication {
+  background-image: url('./images/MATSUOKA_communication.jpg');
+}
+
+/* Now_page が "SUIHANN" の場合 */
+.header-background-SUIHANN {
+  background-image: url('./images/MATSUOKA_SUIHANN.jpg');
+}
+
+/* Now_page が "ranking" の場合 */
+.header-background-ranking {
+  background-image: url('./images/MATSUOKA_ranking.jpg');
+}
+
+/* Now_page が "recruitment" の場合 */
+.header-background-recruitment {
+  background-image: url('./images/MATSUOKA_recruitment.jpg');
+}
+
+/* Now_page が "billing" の場合 */
+.header-background-billing {
+  background-image: url('./images/MATSUOKA_billing.jpg');
+}

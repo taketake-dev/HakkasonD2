@@ -1,0 +1,36 @@
+/* コンテナの基本スタイル */
+.side-container {
+  display: flex;
+  margin: 10px 0;
+}
+
+/* 左寄せ */
+.side-container.left {
+  justify-content: flex-start;
+}
+
+/* 中央寄せ */
+.side-container.center {
+  justify-content: center;
+}
+
+/* 右寄せ */
+.side-container.right {
+  justify-content: flex-end;
+}
+
+/* ボタンの基本スタイル */
+.side-button {
+  padding: 5px 5px;
+  background-color: #007bff;
+  color: white;
+  border: 2px solid #0056b3; /* 実線の枠 */
+  border-radius: 10px; /* 角を丸く */
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.side-button:hover {
+  background-color: #0056b3; /* ホバー時の背景色 */
+  border-color: #003f7f; /* ホバー時の枠線の色 */
+}

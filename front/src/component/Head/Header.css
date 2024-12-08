@@ -1,0 +1,81 @@
+/* ヘッダーの基本的なスタイル */
+.header {
+    position: relative; /* HeadBackgroundと重ねるために相対位置 */
+    z-index: 1; /* ヘッダーが背景より上に表示されるように */
+}
+
+/* メニューの表示/非表示を制御するためのスタイル */
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* ボタンの間隔 */
+    transition: all 0.3s ease; /* アニメーション追加 */
+    opacity: 0;
+    transform: translateY(-20px);
+    visibility: hidden;
+}
+
+.menu.open {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+}
+
+/* メニューを開くためのボタン */
+.menu-toggle-btn {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.menu-toggle-btn:hover {
+    background-color: #45a049;
+}
+
+/* リセットボタン（ログアウトボタン）のスタイル */
+.reset-btn {
+    padding: 10px 20px;
+    background-color: #f44336; /* リセットボタン用の赤色 */
+    color: white;
+    border: none;
+    cursor: pointer;
+    position: absolute; /* 画面の絶対位置を指定 */
+    top: 0px; /* 上からの距離を設定 */
+    right: 0px; /* 右からの距離を設定 */
+}
+
+.reset-btn:hover {
+    background-color: #d32f2f; /* ホバー時に少し暗い赤色 */
+}
+
+/*ユーザーネーム、もしくはメールアドレスなどの表示させる*/
+body {
+    margin: 0; /* 余白をリセット */
+    padding: 0; /* 余白をリセット */
+    height: 100vh; /* ビューポートの高さに合わせる */
+    overflow-y: auto; /* 縦スクロールを有効にする */
+}
+
+.message_to_you {
+
+    padding: 2px 5px; /* 枠内の余白 */
+    background-color: rgba(221, 255, 0, 0.7); /* 背景色 */
+    color: rgb(36, 0, 0); /* 文字色 */
+    border: 2px solid rgb(36, 0, 0); /* 枠線 */
+    cursor: pointer;
+    font-size: 13px;
+    position: fixed; /* 画面の固定位置に設定 */
+    bottom: 0px; /* 下からの距離を設定 */
+    left: 50%; /* 画面の中央に水平位置を設定 */
+    transform: translateX(-50%); /* 横方向に50%だけ左に移動して中央揃え */
+    z-index: 1000; /* 他の要素の上に表示されるようにする */
+    border-radius: 5px; /* 枠を丸く */
+    
+    max-width: 1000px; /* 最大幅を1000pxに制限 */
+    word-wrap: break-word; /* 長い単語があれば改行する */
+    word-break: break-all; /* 単語内でも改行されるように */
+    overflow-wrap: break-word; /* 長い単語を自動的に改行 */
+}
